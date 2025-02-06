@@ -3,7 +3,7 @@ import "./database/config.js"
 import { engine } from "express-handlebars";
 import cartRouter from "./routes/cart.router.js";
 import productsRouter from "./routes/products.router.js";
-import viewsRouter from "./managers/views.router.js";
+//import viewsRouter from "./routes/views.router.js";
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.set("views", "./src/views");
 
 app.use("/api/products", productsRouter);
 app.use("/api/carts", cartRouter);
-app.use("/", viewsRouter);
+//app.use("/", viewsRouter);
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en  http://${HOSTNAME}:${PORT}`);

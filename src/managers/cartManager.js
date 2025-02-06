@@ -112,6 +112,7 @@ class CartManager {
                 throw error;
         }
     }
+    
     async updateProductQuantity(req, res){
         try {
             const {cid, pid} = req.params
